@@ -1,0 +1,35 @@
+@charset "utf-8";
+
+body {background-image: url(../images/bg_point.gif); margin:0;}
+
+/*注册页面*/
+.write_bg{ margin:0; padding:0; background:url(../images/bg_point_write.gif);}
+
+/*button样式*/
+.butlogin{width:78px; height:26px;  background-image:url(../images/button_dl.gif);border:0;}
+.butzc{width:78px; height:26px;background-image:url(../images/button_zc.gif);border:0;}
+.buttj{width:78px; height:26px; background-image:url(../images/button_tj.gif);border:0;}
+.butcz{width:78px; height:26px; background-image:url(../images/button_cz.gif); border:0;}
+.butxg{width:78px; height:26px; background-image:url(../images/button_xg.gif); border:0;}
+.butqx{width:78px; height:26px; background-image:url(../images/button_qx.gif); border:0;}
+.butsc{width:78px; height:26px; background-image:url(../images/button_sc.gif); border:0;}
+.butdc{width:78px; height:26px; background-image:url(../images/button_dc.gif); border:0;}
+.butcx{width:58px; height:26px; background-image:url(../images/button_cx.gif); border:0;}
+.butll{width:58px; height:26px; background-image:url(../images/button_ll.gif); border:0;}
+
+/*连接文字样式*/
+a.cray:link {font-size: 12px;color: #6b6b6b;text-decoration: none;}
+a.cray:hover {font-size: 12px;color: #6b6b6b;text-decoration: none;}
+a.cray:active {font-size: 12px;color: #6b6b6b;text-decoration: none;}
+a.cray:visited {font-size:12px;color: #6b6b6b;text-decoration: none;}
+/*文字样式*/
+.text_blod{ font-size:14px; font-weight:bold; color:#6b6b6b;}
+.laydate-icon{ font-size:12px; color:#6b6b6b;text-decoration: none; line-height:17px;}
+.text_cray1{font-size:12px;color: #333333;text-decoration: none;}
+.text_red {font-size: 12px;color: #e25c2e;text-decoration: none;line-height: 28px;}
+.text_blue {font-size: 12px;color: #0066cc;text-decoration: none;}
+.text_title {font-size:12px;font-weight: bolder;color: #ff7200;text-decoration: none;;}
+.text_blod_title {font-size:14px;color: #134162;text-decoration: none;font-weight: bold;}
+
+
+

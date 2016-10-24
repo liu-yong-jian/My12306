@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>用户注册</title>
+		
+		<script type = "text/javascript" src = "../js/laydate.js"></script>
+		
+		<script language="JavaScript" type="text/javascript">
+			var pros = new Array();
+			pros[0] = "辽宁省";
+			pros[1] = "吉林省";
+			pros[2] = "江苏省";
+			pros[3] = "广东省";
+			
+			var citys = new Array();
+			citys[0] = new Array();
+			citys[1] = new Array();
+			citys[2] = new Array();
+			citys[3] = new Array();
+			
+			citys[0][0] = "沈阳市";
+			citys[0][1] = "大连市";
+			citys[1][0] = "长春是";
+			citys[1][1] = "吉林市";
+			citys[2][0] = "南京市";
+			citys[2][1] = "无锡市";
+			citys[3][0] = "广州市";
+			citys[3][1] = "梅州市";
+			citys[3][2] = "惠州市";
+			citys[3][3] = "东莞市";
+			citys[3][4] = "汕尾市";
+			
+			
+			function f_changeCity(){
+				var v_city = document.getElementById("city");
+				var v_province = document.getElementById("provinces");
+				v_city.options.length = 0;
+				
+				var prosValue = v_province.options[v_province.selectedIndex].value;
+//				document.write(prosValue+"<br>");
+//				document.write(v_province.selectedIndex);
+				for(var i=0;i<citys[prosValue].length;i++){
+					var text = citys[prosValue][i];
+					var value = i;
+					v_city.options[v_city.options.length] = new Option(text,value);
+				}
+				v_city.focus();
+			}
+		</script>
+		
+		<script type = "text/javascript" language="JavaScript">
+		function f_validate(obj){
+			with(obj){
+			var nameReg = /^[a-z]\w{4,19}$/;
+			var idReg = /^\d{15}$|^\d{18}$|^\d{17}[xX]$/;
+			var pwReg = /^\w{6}$/;
+			if(!username.value.match(nameReg))
+			{
+				alert("用户名不正确！");
+				return false;
+			}
+			
+			if(!password.value.match(pwReg)){
+				alert("密码不正确！")
+				return false;
+			}
+			
+			if(!IDCard.value.match(idReg)){
+				alert("身份证号码不正确！")
+				return false;
+			}
+			return true;
+		}
+			}
+		</script>
+		
+	</head>
+	<body>
+		<form action = "../register"
+		onsubmit="return f_validate(this)"
+		>
+			<table>
+				<tr><td><div align="right">用户注册信息</div></td></tr>
+				
+				<tr><td>注:标有*处,均为必填处</td></tr>
+				
+				<tr><td>登录信息:</td></tr>
+				
+				<tr>
+				<table border="0">
+					<tr>
+						<td>*</td>
+						<td>&nbsp;登录名:<input type="text" name="username" />
+							<input type="hidden" name="unHidden" />
+							
+						</td>
+						<td>由字母、数字或："_"组成，长度不少于6位，不多于30位</td>
+					</tr>
+					
+					<tr>
+						<td>*</td>
+						<td>&nbsp;密&nbsp;&nbsp;码:&nbsp;<input type="password" name="password" /></td>
+						<td>不少于6位字符</td>
+					</tr>
+					
+					<tr>
+						<td>*</td>
+						<td>确认密码:<input type="password" name="comfirpw" /></td>
+						<td>请再输入密码</td>
+					</tr>
+				</table>	
+				</tr>
+				
+				<tr><td>详细信息:</td></tr>
+				
+				<tr>
+					<table border="0">
+					<tr>
+						<td>*</td>
+						<td>真实姓名:<input type="text" name="realname" /></td>
+						<td>&nbsp;</td>
+						</tr>
+						<tr>
+						<td>*</td>
+						<td>性别:
+						<input type="radio" name="sex"/>男
+						<input type="radio" name="sex"/>女
+						</td>
+						<td>&nbsp;</td>
+						</tr>
+						
+						<tr>
+		<td>*</td>
+<td>省份:
+	<select name="province" id = "provinces" onchange="f_changeCity()" >
+		<option  selected="selected" >请选择省份</option>
+		<script type="text/javascript">
+			for (var i = 0; i < pros.length; i++) {
+				document.write("<option value='"+i+"'>" + pros[i] + "</option>");
+			}
+		</script>
+	</select>	&nbsp;&nbsp;&nbsp;
+							城市:<select name = "city" id="city">
+								<option value="城市" selected="selected">请选择城市</option>
+							</select></td>
+						</tr>
+						
+						<tr>
+							<td>*</td>
+							<td>证件类型:<select name = "styleID" >
+								<option value="1" selected="selected">二代身份证</option>
+								<option value="2" >港澳通行证</option>
+								<option value="3">台湾通行证</option>
+								<option value="4" >护照</option>
+							</select>
+						</tr>
+						
+						<tr>
+							<td>*</td>
+							<td>证件号码:<input type="text" name="IDCard" /></td>
+						<td>&nbsp;</td>
+						</tr>
+							
+							<tr>
+							<td>*</td>
+							<td>出生日期:<input class = "laydate-icon" id="demo" /></td>
+						<td>&nbsp;</td>
+							</tr>
+						
+						<tr>
+							<td>&nbsp;</td>
+							<td>旅客类型:<select name = "styleID" >
+								<option value="1" selected="selected">成人</option>
+								<option value="2" >儿童</option>
+								<option value="3">学生</option>
+								<option value="4" >残疾军人</option>
+							</select>
+						</tr>
+							</table>
+				</tr>
+				
+				<tr>
+					<table border="0">
+						<tr>
+						<td>&nbsp;</td>
+						<td>备注:</td>
+						<td><textarea cols="22" rows="10"></textarea></td>
+						</tr>
+						
+						<tr>
+							<td>&nbsp;</td>
+							<td>&nbsp;</td>
+							<td>
+							<input type="checkbox" name = "checkbox" />我已同意并遵守 <a href ="#">《中国铁路客户服务中心网站服务条款》</a>
+						</td></tr>
+					</table>
+				</tr>
+				
+				<tr>
+				<td>&nbsp;</td>
+				<td><input type = "submit" />
+				<input type = "reset" value = "重置" />
+				</td>
+				</tr>
+				
+			</table>
+		</form>
+		
+		<script type = "text/javascript">
+			!function(){
+				laydate.skin("molv");
+				laydate({elem:'#demo'});
+			}();
+			
+			var start = {
+				elem:'#start',
+				format:'YYYY-MM-DD',
+				min:laydate.now(),
+				max:'2099-9-09',
+				istime:true,
+				istoday:false,
+				choose:function(datas){
+					end.min = datas;
+					end.start = datas
+				}
+			};
+			var end = {
+			elem:'#end',
+				format:'YYYY-MM-DD',
+				min:laydate.now(),
+				max:'2099-9-09',
+				istime:true,
+				istoday:false,
+				choose:function(datas){
+					start.max = datas;
+				}
+				
+			};
+			laydate(start);
+			laydate(end);
+			laydate({
+				elem:'#test1',
+				format:'YYYY年-MM月-DD日',
+				festival:true,
+				choose:function(datas){
+					alert('得到:'+datas);
+				}
+			});
+			
+			laydate({
+				elem:'#hello3',
+				min:laydate.now(-1),
+				max:laydate.now(+1)
+			});
+		</script>
+		
+	</body>
+</html>

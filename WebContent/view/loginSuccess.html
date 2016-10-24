@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+				#top_bg{
+			width:100%;
+			height:100px;
+			background-image:url(../img/ny_top_img.gif);
+		}
+		#top{
+			width:608px;
+			height:100px;
+			background-image:url(../img/ny_top_img.gif);
+		}
+			
+			#nav{
+				width: 100%;
+				height: 30px;
+				background-color:#deedf8;
+				float: left;
+			}
+			
+			#menu{
+				width: 900px;
+				height: 300px;
+			}
+			
+			#left{
+				width: 200px;
+				height:300px;
+				color: black;
+				/*background: wheat;*/
+				float: left;
+			}
+			
+			#content{
+				width: 700px;
+				height:300px;
+				/*background-image: url(img/ny_img_banner.jpg);*/
+				color: black;
+				float: left;
+			}
+			
+			#foot{
+				width: 100%;
+				height: 20px;
+				text-align:center;
+			line-height:30px;
+			background-image:url(../img/bottom_ny_bg.gif);
+			}
+			
+			#tb_nav{
+				width:100%;
+			}
+			
+			#nav_location{
+				width: 20%;
+				align-content: center;
+				padding-left: 30px;
+				
+			}
+			
+			#nav_username{
+				width: 40%;
+				text-align: left;
+			}
+			
+			#nav_time{
+				width:35%;
+				text-align: right;
+			}
+			
+			#logout{
+				
+				text-align: right;
+			}
+			
+			
+		</style>
+		
+		<script type = "text/javascript">
+		var sid;
+			function updateTime(){
+				var nd = new Date();
+				var y = nd.getFullYear();
+				var m = nd.getMonth()+1;
+				var d = nd.getDate();
+				var w = nd.getDay();
+				var h = nd.getHours();
+				var mm = nd.getMinutes();
+				var ss = nd.getSeconds();
+			    var dateStr = y+"年" + m + "月" + d + "日 " 
+			    +h+":"+mm+":"+ss;
+			    var nav_time = document.getElementById("nav_time");
+			    nav_time.innerHTML = dateStr;
+			}
+			sid = setInterval("updateTime()",1000);
+		</script>
+		
+		<script type = "text/javascript">
+			function f_selectAll(obj){
+				var checkName = document.getElementsByName("checkName");
+				if(obj.checked){
+					for(var i = 0;i<checkName.length;i++){
+						checkName[i].checked = true;
+					}
+				}else{
+					for(var i = 0;i<checkName.length;i++){
+						checkName[i].checked =false;
+					}
+				}
+			}	
+		</script>
+		
+		
+	</head>
+	<body>
+			<div id="top_bg">
+		<div id="top"></div>
+	</div>
+			<div id = "nav">
+				<table id = "tb_nav">
+					<tr>
+						<td id = "nav_location">当前用户</td>
+						<td id = "nav_username">
+							<marquee behavior="scroll" direction="right">欢迎您刘先生</marquee>
+						</td>
+						<td id = "nav_time">时间</td>
+						<td id = "nav_logout"><a href = "#">退出</a></td>
+					</tr>
+				</table>
+			</div>
+			
+			<div id = "menu">
+				
+		<div id = "left">
+			<ul id="top_li">
+				<li>管理员</li>
+			</ul>
+			
+			<ul id="meun_li">
+				<li><a class="li" href="">用户管理</a></li>
+				<li><a class="li" href="">新增用户</a></li>
+			</ul>
+		</div>
+			
+		<div id = "content" >
+			<tr>
+				<table width="100%" border="0">
+					<tr>
+					<td>
+					姓名:<input type = "text"/>
+					</td>
+					
+					<td>性别:
+						<select name = "sex">
+						<option value = "男">男</option>
+						<option value = "女">女</option>
+					</select></td>
+					
+					<td>证件类型:
+						<select name = "idCard">
+						<option value = "1">身份证</option>
+						<option value = "2">港澳通行证</option>
+						<option value="3">台湾通行证</option>
+					    <option value="4" >护照</option>
+					</select>
+					</td>
+					
+					<td>证件号码:<input type="text" name="IDCard" /></td>
+					
+					<td>旅客类型:<select name = "styleID" >
+								<option value="1" selected="selected">成人</option>
+								<option value="2" >儿童</option>
+								<option value="3">学生</option>
+								<option value="4" >残疾军人</option>
+					</select>
+					</td>
+					
+					<td><input type = "button" value = "查询"/></td>
+					</tr>
+				</table>
+			</tr>
+			
+			<tr>
+				<table border="" width="100%">
+					<tr align="center">
+						<td>选择</td>
+						<td>姓名</td>
+						<td>性别</td>
+						<td>证件类型</td>
+						<td>证件号码</td>
+						<td>旅客类型</td>
+						<td>操作</td>
+					</tr>
+					
+					<tr align="center">
+						<td ><input type = "checkbox" name = "checkName"></td>
+						<td>用户1</td>
+						<td>男</td>
+						<td>二代身份证</td>
+						<td>123456789123456789</td>
+						<td>成人</td>
+						<td><a href = "#">编辑</a></td>
+					</tr>
+					
+					<tr align="center">
+						<td ><input type = "checkbox" name = "checkName"></td>
+						<td>用户1</td>
+						<td>男</td>
+						<td>二代身份证</td>
+						<td>123456789123456789</td>
+						<td>成人</td>
+						<td><a href = "#">编辑</a></td>
+					</tr>
+					
+					<tr align="center">
+						<td ><input type = "checkbox" name = "checkName"></td>
+						<td>用户2</td>
+						<td>男</td>
+						<td>港澳通行证</td>
+						<td>123456789123456789</td>
+						<td>儿童</td>
+						<td><a href = "#">编辑</a></td>
+					</tr>
+					
+					<tr align="center">
+						<td ><input type = "checkbox" name = "checkName"></td>
+						<td>用户3</td>
+						<td>女</td>
+						<td>二代身份证</td>
+						<td>123456789123456789</td>
+						<td>成人</td>
+						<td><a href = "#" id = "edit">编辑</a></td>
+					</tr>
+					</table>
+					<!--<tr><td colspan="7">&nbsp;</td></tr>-->
+					
+					<table>
+					<tr>
+						<td>全选<input type = "checkbox" onclick="f_selectAll(this)"/></td>
+					<td colspan="4">&nbsp;</td>
+					
+					
+					<td  align="center"><input type = "button" value = "删除" /></td>
+					
+					<td  align="center"><input type = "button" value = "导出excel"/></td>
+					</tr>
+					
+						<tr>
+						<td colspan="2">&nbsp;</td>
+					<td align="center"colspan="3">&gt;&gt;1 2 3 4 5 6 7&lt;&lt;</td>
+					<td>每页显示</td>
+					<td><select>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+						<option>5</option>
+						<option>6</option>
+					</select> 条信息</td>
+					</tr>
+					</table>			
+			</tr>
+		</table>
+		</div>
+		
+		<div id = "foot">copyright@my12306购票网</div>
+	</body>
+</html>

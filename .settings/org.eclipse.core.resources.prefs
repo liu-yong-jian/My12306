@@ -1,0 +1,4 @@
+eclipse.preferences.version=1
+encoding//src/at/danicoz/user/dao/impl/UserDaoImpl.java=UTF-8
+encoding//src/at/danicoz/user/servlet/LoginServlet.java=UTF-8
+encoding//src/at/danicoz/user/servlet/RegisterServlet.java=UTF-8
