@@ -1,0 +1,214 @@
+<html>
+<head>
+	<style type="text/css">
+		*{
+			margin:0;
+		}
+		#top_bg{
+			width:100%;
+			height:100px;
+			background-image:url(img
+		/ny_top_img_bg.gif);
+		}
+		#top{
+			width:608px;
+			height:100px;
+			background-image:url(img/ny_top_img.gif);
+		}
+		#content_nav{
+			width:100%;
+			height:28px;
+			line-height:28px;
+			background-color:#deedf8;
+		}
+		#content_nav_location{
+			width:300px;
+			height:100%;
+			float:left;
+			margin-left:10%;
+		}
+		#content_nav_logout{
+			width:300px;
+			height:100%;
+			float:right;
+			text-align:right;
+			margin-right:5%;
+		}
+		#content_body{
+			width:100%;
+			height:400px;
+			clear:both;
+		}
+		#menu{
+			width:15%;
+			height:400px;
+			float:left;
+		}
+		#content{
+			width:85%;
+			height:400px;
+			float:left;
+		}
+		#foot{
+			width:100%;
+			height:30px;
+			
+			text-align:center;
+			line-height:30px;
+			background-image:url(img/bottom_ny_bg.gif);
+		}
+		#top_li{
+			margin-top:30px;
+			list-style:none;
+			font-weight:bold;
+			font-size:14px;
+		}
+		#meun_li{
+			margin-top:10px;
+			list-style-image:url("img/ny_arrow1.gif");
+
+		}
+		a.li:link{
+			text-decoration:none;
+		}
+		a.li:hover{
+			text-decoration:underline;
+		}
+	</style>
+</head>
+<body>
+	<div id="top_bg">
+		<div id="top"></div>
+	</div>
+	<div id="content_nav">
+		<div id="content_nav_location">当前位置:用户管理</div>
+		<div id="content_nav_logout">欢迎你xxxx!&nbsp;&nbsp;
+			<a href="">退出</a>
+		</div>
+	</div>
+	<div id="content_body">
+
+		<div id="menu">
+			<ul id="top_li">
+				<li>管理员</li>
+			</ul>
+			<ul id="meun_li">
+				<li><a class="li" href="">用户管理</a></li>
+				<li><a class="li" href="">新增用户</a></li>
+			</ul>
+		</div>
+		<div id="content">
+		
+		<table>
+		 <tr>
+          <td>
+          	<table width="100%" border="0">
+              <tr>
+                <td width="32">姓名</td>
+                <td width="168"><label for="textfield"></label>
+                  <input type="text" name="textfield"/></td>
+                <td width="32">性别</td>
+                <td width="47"><label for="select"></label>
+                  <select name="select" id="select">
+                    <option value="0">男</option>
+                  </select></td>
+                <td width="65">证件类型</td>
+                <td width="72"><label for="select2"></label>
+                  <select name="select2" id="select2">
+                    <option value="0">身份证</option>
+                    <option value="1">护照</option>
+                  </select></td>
+                <td width="63">证件号码</td>
+                <td width="168"><label for="textfield2"></label>
+                  <input name="textfield2" type="text" readonly="readonly"/></td>
+                <td width="64">旅客类型</td>
+                <td width="58"><label for="select3"></label>
+                  <select name="select3" id="select3">
+                    <option value="0">成人</option>
+                  </select></td>
+                <td width="54"><input type="submit" name="button" id="button" value="查询" /></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr>
+          <td><table width="100%" border="1" align="center" cellpadding="0" cellspacing="1" bordercolor="#dadada">
+              <tr align="center">
+                <td width="44" height="25" valign="middle"   >选择</td>
+                <td width="98" height="25" valign="middle"  >姓名</td>
+                <td width="80" height="25" valign="middle"  >性别</td>
+                <td width="132" height="25" valign="middle"  >证件类型</td>
+                <td width="247" height="25" valign="middle"  >证件号码</td>
+                <td width="82" height="25" valign="middle"  >旅客类型</td>
+                <td width="89" height="25" valign="middle"  >操作</td>
+              </tr>
+              <tr align="center">
+                <td    ><input type="checkbox" name="checkbox" value="1"></td>
+                <td width="98"   >用户1</td>
+                <td width="80"   >男</td>
+                <td width="132"   >二代身份证</td>
+                <td width="247"   >220198112081022</td>
+                <td width="82"   >成人</td>
+                <td width="89"   ><a href="xxxxx.html">编辑</a></td>
+              </tr>
+              <tr align="center">
+                <td    ><input type="checkbox" name="checkbox" value="2"></td>
+                <td width="98"   >用户2</td>
+                <td width="80"   >男</td>
+                <td width="132"   >二代身份证</td>
+                <td width="247"   >23621519701208101x</td>
+                <td width="82"   >成人</td>
+                <td width="89"   ><a href="xxx.html" >编辑</a></td>
+              </tr>
+              <tr align="center">
+                <td    ><input type="checkbox" name="checkbox" value="3"></td>
+                <td width="98"   >用户3</td>
+                <td width="80"   >男</td>
+                <td width="132"   >二代身份证</td>
+                <td width="247"   >221251197112081021</td>
+                <td width="82"   >成人</td>
+                <td width="89"   ><a href="xxx.html" >编辑</a></td>
+              </tr>
+              <tr align="center">
+                <td    ><input type="checkbox" name="checkbox" value="4"></td>
+                <td width="98"   >用户4</td>
+                <td width="80"   >女</td>
+                <td width="132"   >二代身份证</td>
+                <td width="247"   >210211197012081019</td>
+                <td width="82"   >成人</td>
+                <td width="89"   ><a href="xxx.html" >编辑</a></td>
+              </tr>
+              <tr align="center">
+                <td   ><input type="checkbox" name="checkbox" value="5"></td>
+                <td width="98"  >用户5</td>
+                <td width="80"  >女</td>
+                <td width="132"  >二代身份证</td>
+                <td width="247"  >210211197012081019</td>
+                <td width="82"  >成人</td>
+                <td width="89"  ><a href="xxx.html" >编辑</a></td>
+              </tr>
+            </table></td>
+        </tr>
+        <tr>
+          <td height="27">全选
+            <input type="checkbox" name="checkbox2" id="checkbox" /></td>
+          <td><input type="submit" name="button2" id="button2" value="删除" />
+            <input type="submit" name="button3" id="button3" value="导出excel" /></td>
+        </tr>
+        <tr>
+          <td align="center">&gt;&gt; 1 2 3 4 5 6 7 8 &lt;&lt;</td>
+          <td width="190">每页显示?
+                  <select name="select4">
+				     <option>10</option>
+                    <option>20</option>
+        			<option>30</option>
+                  </select>
+                  条信息</td>
+        </tr>
+    </table></td>
+  </tr>
+  </table>
+		</div>
+	</div>
+	<div id="foot">copyright@my12306购票网</div>
+</body>
+</html>
