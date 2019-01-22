@@ -9,7 +9,7 @@ import at.danicoz.user.po.City;
  * @author Administrator
  *
  */
-public interface CityDao {
+public interface CityDao {  
 	/**
 	 * 根据省份标识获取所有城市信息列表
 	 * @param proID
