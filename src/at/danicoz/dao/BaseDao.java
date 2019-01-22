@@ -31,6 +31,7 @@ public class BaseDao {
 		try{
 			Context cxt = new InitialContext();
 			DataSource ds = (DataSource) cxt.lookup("java:comp/env/jdbc/My12306");
+			System.out.println("测试Git功能");
 			conn = ds.getConnection();
 		}catch(NamingException e){
 			e.printStackTrace();
