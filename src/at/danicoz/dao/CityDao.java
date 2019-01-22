@@ -16,5 +16,5 @@ public interface CityDao {
 	 * @return
 	 * @throws SQLException
 	 */
-	List<City> getCityListByProID(String proID) throws SQLException;
+	List<City> getCityListByProID(String proID) throws SQLException; 
 }
