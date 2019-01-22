@@ -1,8 +1,7 @@
 package at.danicoz.dao;
-
 import java.sql.SQLException;
 import java.util.List;
-
+ 
 import at.danicoz.user.po.City;
 
 /**
